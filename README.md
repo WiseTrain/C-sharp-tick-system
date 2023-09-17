@@ -1,27 +1,4 @@
 # C-sharp-tick-system
-Student project: a prototype of Ticketing system using C#, Windows forms and UDP protocol. 
-## Objectives
-The goal is a prototype of the ticketing system, which could recieve Help Desk Tickets from the staff member, could display all tickets, provide opportnity to respond or reopen any ticket, display statistics. Application has a graphic interface (Windows Forms) and consists of two parts: 
-## Help Desk Client
-This app provides functionality to collect a help desk request from a staff member then send data to "server" part which will store and handle the Help Desk ticket. 
-### Files
-- program.cs (starts the "client" App and open the form for data collection. On submission the client app sends data to "server" part via UDP protocol. (?? port))
-- Form1.cs (graphic interface)
-
-## Ticketing system
-This is a "server" part of the system. It recieves and stores all tickets, also provides the opportunity to respond it. App has main thread to handle tickets and all help desk processes, and second thread which is "listening" the port # and provides communications between client and server. 
-The system doesn't include any real database to store data as it was not required. All data will disappear as soon as you close the application. :)
-
-### Files
-- program.cs (inicialises the Ticketing system)
-- Ticket.cs (a module for Ticket class. Each ticket has several attributes (creator's name and staff ID, the description of the issue, IT response, status, etc))
-- TicketForm.cs (a graphic interface for entering/editing a ticket)
-- PasswordGenerator.cs (a module for the class generating a password following certain rools in case the issue contains words "change" and "password".)
-- Ticketing system.cs (a module for ticketing system class. On initialising starts the second thread listening to port=5678 and invokes the creation of the new ticket if the data recieved from client. Also provides interaction with GUI).
-- Ticket Form.cs (supports GUI and sends data to port=5678 when data submitted)
-- TicketStats.cs (a structure and functionality of Ticketing system + statistics)
-
-# C-sharp-tick-system
 **Project Overview:**
 C-sharp-tick-system is a student project that serves as a prototype of a Ticketing System using C#, Windows Forms, and the UDP protocol.
 
